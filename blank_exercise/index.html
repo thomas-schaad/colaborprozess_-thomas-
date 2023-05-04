@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chessboard</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <script src="sketch.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    function downloadSVG() {
+      let svg = document.getElementsByTagName("svg")[0];
+      let svgData = new XMLSerializer().serializeToString(svg);
+      let downloadLink = document.createElement("a");
+      downloadLink.href = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgData);
+      downloadLink.download = "chessboard.svg";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
+  </script>
+  <button onclick="downloadSVG()">Download as SVG</button>
+</body>
+</html>
