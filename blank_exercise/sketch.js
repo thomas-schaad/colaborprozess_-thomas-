@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(1080, 1080)//,SVG); 
+  createCanvas(1080, 1080); 
   background(0, 0, 255);
 }
 
@@ -16,8 +16,4 @@ function draw() {
       rect(x, y, sq, sq);
     }
   }
-
-  //save("chessboard.svg"); 
-  //print("saved svg");
-  //noLoop();
 }
